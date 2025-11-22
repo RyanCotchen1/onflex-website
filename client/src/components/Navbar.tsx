@@ -33,28 +33,32 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" data-testid="link-home">
-            <div className="flex items-center gap-2 hover-elevate active-elevate-2 rounded-md px-2 py-1 -ml-2">
-              <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
+            <span className="flex items-center gap-2 hover-elevate active-elevate-2 rounded-md px-2 py-1 -ml-2 cursor-pointer">
+              <span className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">OF</span>
-              </div>
+              </span>
               <span className="text-xl font-bold tracking-tight">OnFlex</span>
-            </div>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} data-testid={`link-${link.label.toLowerCase()}`}>
-                <Button
-                  variant={location === link.href ? "secondary" : "ghost"}
-                  className="font-semibold"
-                >
+              <Button
+                key={link.href}
+                variant={location === link.href ? "secondary" : "ghost"}
+                className="font-semibold"
+                asChild
+              >
+                <Link href={link.href} data-testid={`link-${link.label.toLowerCase()}`}>
                   {link.label}
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             ))}
-            <Link href="/book" data-testid="link-book">
-              <Button className="ml-4 font-semibold">Book a Session</Button>
-            </Link>
+            <Button className="ml-4 font-semibold" asChild>
+              <Link href="/book" data-testid="link-book">
+                Book a Session
+              </Link>
+            </Button>
           </nav>
 
           <Sheet>
@@ -66,18 +70,22 @@ export default function Navbar() {
             <SheetContent>
               <nav className="flex flex-col gap-4 mt-8">
                 {navLinks.map((link) => (
-                  <Link key={link.href} href={link.href} data-testid={`link-mobile-${link.label.toLowerCase()}`}>
-                    <Button
-                      variant={location === link.href ? "secondary" : "ghost"}
-                      className="w-full justify-start font-semibold"
-                    >
+                  <Button
+                    key={link.href}
+                    variant={location === link.href ? "secondary" : "ghost"}
+                    className="w-full justify-start font-semibold"
+                    asChild
+                  >
+                    <Link href={link.href} data-testid={`link-mobile-${link.label.toLowerCase()}`}>
                       {link.label}
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 ))}
-                <Link href="/book" data-testid="link-mobile-book">
-                  <Button className="w-full font-semibold">Book a Session</Button>
-                </Link>
+                <Button className="w-full font-semibold" asChild>
+                  <Link href="/book" data-testid="link-mobile-book">
+                    Book a Session
+                  </Link>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
