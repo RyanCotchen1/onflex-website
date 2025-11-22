@@ -1,0 +1,237 @@
+irst marketing + booking website for my company OnFlex, a mobile recovery service.
+
+Company Overview
+
+Name: OnFlex
+
+Tagline: “Recovery for the committed, not the casual.”
+
+What we do: Mobile 1:1 assisted stretching, mobility work, and percussive recovery for athletes and “everyday athletes” (runners, lifters, nurses, shift workers, etc.). We travel to clients’ homes, gyms, workplaces, and sporting events.
+
+Location for now: Pittsburgh, PA (service area section should highlight this but be easy to edit later).
+
+Tech Stack
+
+Use:
+
+Next.js (latest) with App Router
+
+TypeScript
+
+Tailwind CSS for styling
+
+Simple backend API routes inside Next.js for handling forms
+
+The project should be clean, well-structured, and easy for a non-developer to tweak text, colors, and images.
+
+Design & Branding
+
+Modern, athletic, performance-oriented look.
+
+Color palette: use a dark charcoal/black base, white backgrounds, and a bright accent color (e.g., athletic orange or neon yellow-green). Put these in a Tailwind config so I can change them easily.
+
+Assume I have a logo file named onflex-logo.png in /public. Use it in the navbar and footer.
+
+Use a simple, bold sans-serif font (e.g., Inter).
+
+Site Structure (Pages & Routes)
+
+Create the following pages:
+
+/ Home
+
+Hero section with:
+
+OnFlex logo
+
+Headline: “Mobile Recovery for Everyday Athletes”
+
+Subhead: “OnFlex brings 1:1 assisted stretching, mobility, and recovery directly to you.”
+
+Primary CTA button: “Book a Session” → links to /book
+
+Secondary CTA: “View Services” → links to /services
+
+“How It Works” section (3 steps):
+
+Book your session.
+
+We come to your location with all equipment.
+
+You leave feeling recovered and ready to perform.
+
+“Who We Help” section:
+
+Runners & endurance athletes
+
+Lifters & field/court athletes
+
+Nurses, shift workers, and desk workers
+
+“Why OnFlex” section:
+
+Bullet points like: mobile convenience, evidence-based techniques, consistent recovery for serious performers.
+
+Testimonials placeholder section (cards with name, role, and quote — dummy data for now).
+
+Service area section: “Currently serving Pittsburgh, PA and surrounding areas.”
+
+/services
+
+List and describe core MVP services:
+
+1:1 Assisted Stretching Session (30 / 60 minutes)
+
+Mobility & Range of Motion Session
+
+Percussive Therapy Add-On
+
+Event Recovery Tent (for races, tournaments, etc.)
+
+Each service should have:
+
+Short description
+
+Recommended for (e.g., marathoners, lifters, nurses)
+
+Duration options
+
+“Book this service” button linking to /book and pre-selecting that service via query param or state.
+
+/pricing
+
+Simple pricing table for MVP (use placeholder numbers I can edit):
+
+Single 60-min session
+
+4-pack / 8-pack of sessions
+
+Event day rate (half-day / full-day)
+
+Highlight “mobile service” and note that prices may vary by distance.
+
+CTA button under pricing: “Book a Session” → /book.
+
+/book
+
+This is a functional booking/intake page for the MVP.
+
+Create a form with the following fields:
+
+Full Name (required)
+
+Email (required)
+
+Phone Number (required)
+
+Location / Address (required)
+
+Preferred Date (date picker)
+
+Preferred Time Window (dropdown)
+
+Service Type (dropdown: the services defined above)
+
+How did you hear about OnFlex? (optional)
+
+Additional Notes / Injuries / Goals (textarea)
+
+Checkbox: “I understand this is not physical therapy or medical treatment.”
+
+On submit:
+
+POST to a Next.js API route (e.g., /api/book).
+
+For MVP, store submissions in a simple JSON or SQLite DB file on the server AND log them to the console.
+
+Also send a placeholder success message: “Thanks! We’ll confirm your session by email.”
+
+Structure the code so that later I can plug in an email service (e.g., SendGrid) or integrate Calendly.
+
+Show inline form validation and user-friendly error messages.
+
+/about
+
+Section for “Our Mission”:
+
+Talk about helping committed people recover like athletes, reducing burnout, and keeping them in the game.
+
+“Our Philosophy”:
+
+Everyone with a body is an athlete.
+
+Recovery is a non-negotiable for high performance.
+
+Founder section placeholder:
+
+Photo placeholder
+
+Short bio text (dummy content).
+
+/contact
+
+Simple contact form (name, email, message).
+
+On submit, POST to /api/contact, log the data, and show success message.
+
+Also include an email address and Instagram placeholder for direct contact.
+
+Global Layout & Components
+
+Global Navbar:
+
+Left: logo
+
+Right: links: Home, Services, Pricing, About, Contact
+
+A prominent “Book” button in the navbar that links to /book
+
+Sticky at the top on scroll.
+
+Footer:
+
+Logo (small)
+
+Quick links (Home, Services, Book, Contact)
+
+Text: “© OnFlex [current year]. Recovery for the committed, not the casual.”
+
+Responsive Design:
+
+Must look great on mobile first, then tablet and desktop.
+
+Use flex/grid layouts, stack sections on small screens.
+
+Functionality & Code Quality
+
+Use React components with clear separation (e.g., Hero, ServiceList, PricingTable, TestimonialSection, FAQSection, BookingForm, ContactForm).
+
+Create a simple config file or data folder (e.g., data/services.ts, data/pricing.ts, data/testimonials.ts) so I can edit text and pricing easily without touching core components.
+
+Include basic SEO:
+
+Page titles and meta descriptions per page.
+
+Open Graph tags on the main layout.
+
+Include a simple FAQ section that can be used on either Home or Services page:
+
+e.g., “Is this physical therapy?”, “What should I wear?”, “Do you bring equipment?”, “Do you take insurance?”
+
+Deliverables
+
+A complete Next.js + TypeScript + Tailwind project.
+
+All pages and components wired up and styled.
+
+Booking and contact forms hooked to API routes with basic server-side handling and validation.
+
+Clear comments in the code explaining where to plug in:
+
+Real email service
+
+Real scheduling tool (Calendly, etc.)
+
+Real payment/Stripe integration later.
+
+Build the entire project in one go so it runs out-of-the-box with npm install and npm run dev.
