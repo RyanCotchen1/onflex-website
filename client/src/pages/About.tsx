@@ -118,7 +118,7 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-semibold mb-2">Alex Martinez</h3>
+            <h3 className="text-2xl font-semibold mb-2">Ryan Cotchen</h3>
             <p className="text-muted-foreground mb-6">Founder & Lead Recovery Specialist</p>
             <div className="text-lg text-muted-foreground max-w-2xl space-y-4">
               <p>
