@@ -59,12 +59,12 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Get in Touch</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:info@onflex.com"
+                href="mailto:Ryan@onflex.fit"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-email"
               >
                 <Mail className="h-4 w-4" />
-                <span>info@onflex.com</span>
+                <span>Ryan@onflex.fit</span>
               </a>
               <a
                 href="https://instagram.com/onflex"
