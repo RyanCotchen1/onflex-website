@@ -4,7 +4,7 @@
 
 OnFlex is a mobile recovery service platform that brings professional 1:1 assisted stretching, mobility work, and percussive therapy directly to clients in Pittsburgh, PA. The application serves as both a marketing website and booking platform for "everyday athletes" - ranging from competitive runners and lifters to healthcare workers and shift employees who need professional recovery services.
 
-The platform emphasizes a performance-oriented, athletic aesthetic while maintaining professional accessibility. The tagline "Recovery for the committed, not the casual" reflects the target audience of serious performers who understand recovery as essential to their craft.
+The platform emphasizes a performance-oriented, athletic aesthetic while maintaining professional accessibility. The tagline "Recovery for the Everyday Athlete" reflects the target audience of serious performers who understand recovery as essential to their craft.
 
 ## User Preferences
 

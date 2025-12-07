@@ -14,7 +14,7 @@ export default function Home() {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "OnFlex brings professional 1:1 assisted stretching, mobility work, and recovery directly to you in Pittsburgh, PA. Recovery for the committed, not the casual."
+        "OnFlex brings professional 1:1 assisted stretching, mobility work, and recovery directly to you in Pittsburgh, PA. Recovery for the Everyday Athlete."
       );
     }
   }, []);

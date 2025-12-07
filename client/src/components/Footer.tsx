@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="text-lg font-bold">OnFlex</span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Recovery for the committed, not the casual.
+              Recovery for the Everyday Athlete.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
@@ -82,7 +82,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © OnFlex {currentYear}. Recovery for the committed, not the casual.
+            © OnFlex {currentYear}. Recovery for the Everyday Athlete.
           </p>
         </div>
       </div>
