@@ -143,14 +143,14 @@ export default function ContactForm() {
             <div>
               <h3 className="font-semibold mb-3">Social Media</h3>
               <a
-                href="https://instagram.com/onflex"
+                href="https://www.instagram.com/onflex.fit/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-instagram"
               >
                 <Instagram className="h-5 w-5" />
-                <span>@onflex</span>
+                <span>onflex.fit</span>
               </a>
             </div>
 

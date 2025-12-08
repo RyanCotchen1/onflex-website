@@ -67,14 +67,14 @@ export default function Footer() {
                 <span>Ryan@onflex.fit</span>
               </a>
               <a
-                href="https://instagram.com/onflex"
+                href="https://www.instagram.com/onflex.fit/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-instagram"
               >
                 <Instagram className="h-4 w-4" />
-                <span>@onflex</span>
+                <span>onflex.fit</span>
               </a>
             </div>
           </div>
