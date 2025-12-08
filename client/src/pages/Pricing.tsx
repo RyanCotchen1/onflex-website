@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { pricingTiers, eventPricing } from "@/data/pricing";
 import { Check } from "lucide-react";
 import { CALENDLY_BOOK_URL } from "@/lib/links";
+import { Link } from "wouter";
 
 export default function Pricing() {
   useEffect(() => {
