@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Instagram, Mail, MapPin } from "lucide-react";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -42,11 +43,15 @@ export default function Footer() {
                   Pricing
                 </span>
               </Link>
-              <Link href="/book" data-testid="link-footer-book">
-                <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-                  Book a Session
-                </span>
-              </Link>
+              <a
+                href={CALENDLY_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-footer-book"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              >
+                Book a Session
+              </a>
               <Link href="/contact" data-testid="link-footer-contact">
                 <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Contact

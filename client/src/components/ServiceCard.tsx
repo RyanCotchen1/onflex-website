@@ -1,8 +1,8 @@
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { Service } from "@/data/services";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 
 interface ServiceCardProps {
   service: Service;
@@ -38,9 +38,11 @@ export default function ServiceCard({ service, imagePosition = "left" }: Service
             <p className="text-muted-foreground">{service.durations.join(" • ")}</p>
           </div>
           
-          <Link href={`/book?service=${service.id}`} data-testid={`button-book-${service.id}`}>
-            <Button className="font-semibold">Book This Service</Button>
-          </Link>
+          <Button className="font-semibold" asChild data-testid={`button-book-${service.id}`}>
+            <a href={CALENDLY_BOOK_URL} target="_blank" rel="noopener noreferrer">
+              Book This Service
+            </a>
+          </Button>
         </CardContent>
       </div>
     </Card>

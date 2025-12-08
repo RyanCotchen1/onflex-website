@@ -1,5 +1,5 @@
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 
 export default function CTABanner() {
   return (
@@ -11,11 +11,16 @@ export default function CTABanner() {
         <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
           Join the committed athletes who prioritize recovery as part of their performance routine.
         </p>
-        <Link href="/book" data-testid="link-cta-book">
-          <Button size="lg" variant="secondary" className="text-lg px-8 py-6 font-semibold">
+        <Button size="lg" variant="secondary" className="text-lg px-8 py-6 font-semibold" asChild>
+          <a
+            href={CALENDLY_BOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="link-cta-book"
+          >
             Book Your First Session
-          </Button>
-        </Link>
+          </a>
+        </Button>
       </div>
     </section>
   );

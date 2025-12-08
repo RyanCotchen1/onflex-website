@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 import heroImage from "@assets/generated_images/hero_recovery_session_action.png";
 
 export default function Hero() {
@@ -21,11 +22,16 @@ export default function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/book" data-testid="link-hero-book">
-            <Button size="lg" className="text-lg px-8 py-6 font-semibold">
+          <Button size="lg" className="text-lg px-8 py-6 font-semibold" asChild>
+            <a
+              href={CALENDLY_BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="link-hero-book"
+            >
               Book a Session
-            </Button>
-          </Link>
+            </a>
+          </Button>
           <Link href="/services" data-testid="link-hero-services">
             <Button 
               size="lg" 

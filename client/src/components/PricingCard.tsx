@@ -1,9 +1,9 @@
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 import type { PricingTier } from "@/data/pricing";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 
 interface PricingCardProps {
   tier: PricingTier;
@@ -36,11 +36,16 @@ export default function PricingCard({ tier }: PricingCardProps) {
           ))}
         </ul>
         
-        <Link href="/book" data-testid={`button-book-${tier.id}`}>
-          <Button className="w-full font-semibold" variant={tier.popular ? "default" : "outline"}>
+        <Button
+          className="w-full font-semibold"
+          variant={tier.popular ? "default" : "outline"}
+          asChild
+          data-testid={`button-book-${tier.id}`}
+        >
+          <a href={CALENDLY_BOOK_URL} target="_blank" rel="noopener noreferrer">
             Book Now
-          </Button>
-        </Link>
+          </a>
+        </Button>
       </CardContent>
     </Card>
   );

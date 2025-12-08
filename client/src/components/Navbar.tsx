@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logoImage from "@assets/Firefly_Gemini Flash_1763913389232.png";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,9 +58,14 @@ export default function Navbar() {
               </Button>
             ))}
             <Button className="ml-4 font-semibold" asChild>
-              <Link href="/book" data-testid="link-book">
+              <a
+                href={CALENDLY_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-book"
+              >
                 Book a Session
-              </Link>
+              </a>
             </Button>
           </nav>
 
@@ -84,9 +90,14 @@ export default function Navbar() {
                   </Button>
                 ))}
                 <Button className="w-full font-semibold" asChild>
-                  <Link href="/book" data-testid="link-mobile-book">
+                  <a
+                    href={CALENDLY_BOOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="link-mobile-book"
+                  >
                     Book a Session
-                  </Link>
+                  </a>
                 </Button>
               </nav>
             </SheetContent>
