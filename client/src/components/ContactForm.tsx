@@ -19,6 +19,8 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -29,9 +31,33 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Contact form submitted:", data);
-    setIsSubmitted(true);
+  const onSubmit = async (data: ContactFormData) => {
+    setSubmitError(null);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorBody = await response.json().catch(() => ({}));
+        const message = typeof errorBody.message === "string" ? errorBody.message : "Unable to send message";
+        throw new Error(message);
+      }
+
+      setIsSubmitted(true);
+      form.reset();
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "An unexpected error occurred";
+      setSubmitError(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -111,8 +137,20 @@ export default function ContactForm() {
                   )}
                 />
 
-                <Button type="submit" className="w-full font-semibold" size="lg" data-testid="button-submit">
-                  Send Message
+                {submitError ? (
+                  <p className="text-sm text-destructive" role="alert">
+                    {submitError}
+                  </p>
+                ) : null}
+
+                <Button
+                  type="submit"
+                  className="w-full font-semibold"
+                  size="lg"
+                  data-testid="button-submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </Form>
