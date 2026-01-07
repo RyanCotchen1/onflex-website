@@ -25,14 +25,6 @@ export const services: Service[] = [
     image: "mobility_session_service_image.png"
   },
   {
-    id: "percussive-therapy",
-    title: "Percussive Therapy Add-On",
-    description: "High-frequency percussion therapy to release muscle tension, improve blood flow, and accelerate recovery. Perfect as a standalone session or combined with stretching for maximum benefit. We bring professional-grade equipment to your location.",
-    recommendedFor: ["Athletes in heavy training", "Anyone with chronic muscle tension", "Pre/Post event recovery"],
-    durations: ["15 minutes", "30 minutes"],
-    image: "percussive_therapy_service_image.png"
-  },
-  {
     id: "event-recovery",
     title: "Event Recovery Tent",
     description: "Professional recovery services at your race, tournament, or athletic event. We set up a complete recovery station with all equipment, providing on-site assisted stretching and recovery for participants. Perfect for race directors and event organizers looking to enhance their athlete experience.",
