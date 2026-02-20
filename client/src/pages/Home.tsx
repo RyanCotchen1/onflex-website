@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-import WhoWeHelp from "@/components/WhoWeHelp";
 import WhyOnFlex from "@/components/WhyOnFlex";
 import Testimonials from "@/components/Testimonials";
 import ServiceArea from "@/components/ServiceArea";
@@ -23,7 +22,6 @@ export default function Home() {
     <main>
       <Hero />
       <HowItWorks />
-      <WhoWeHelp />
       <WhyOnFlex />
       <Testimonials />
       <ServiceArea />
