@@ -14,10 +14,10 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-20 text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight" data-testid="text-hero-title">
-          Mobile Recovery for Everyday Athletes
+          Recovery For Everyday Athletes
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto" data-testid="text-hero-subtitle">
-          OnFlex brings 1:1 assisted stretching, mobility, and recovery directly to you.
+          Built for athletes and high-output individuals who want to stay durable, move well, and keep showing up.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
