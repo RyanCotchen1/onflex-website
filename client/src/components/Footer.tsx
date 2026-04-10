@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Instagram, Mail, MapPin } from "lucide-react";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@ export default function Footer() {
               <span className="text-lg font-bold">OnFlex</span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Recovery for the committed, not the casual.
+              Recovery for the Everyday Athlete.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
@@ -42,11 +43,15 @@ export default function Footer() {
                   Pricing
                 </span>
               </Link>
-              <Link href="/book" data-testid="link-footer-book">
-                <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-                  Book a Session
-                </span>
-              </Link>
+              <a
+                href={CALENDLY_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-footer-book"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              >
+                Book a Session
+              </a>
               <Link href="/contact" data-testid="link-footer-contact">
                 <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Contact
@@ -59,22 +64,22 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Get in Touch</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:info@onflex.com"
+                href="mailto:Ryan@onflex.fit"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-email"
               >
                 <Mail className="h-4 w-4" />
-                <span>info@onflex.com</span>
+                <span>Ryan@onflex.fit</span>
               </a>
               <a
-                href="https://instagram.com/onflex"
+                href="https://www.instagram.com/onflex.fit/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-instagram"
               >
                 <Instagram className="h-4 w-4" />
-                <span>@onflex</span>
+                <span>onflex.fit</span>
               </a>
             </div>
           </div>
@@ -82,7 +87,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © OnFlex {currentYear}. Recovery for the committed, not the casual.
+            © OnFlex {currentYear}. Recovery for the Everyday Athlete.
           </p>
         </div>
       </div>

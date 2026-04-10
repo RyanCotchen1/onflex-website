@@ -4,7 +4,7 @@ Company Overview
 
 Name: OnFlex
 
-Tagline: “Recovery for the committed, not the casual.”
+Tagline: “Recovery for the Everyday Athlete.”
 
 What we do: Mobile 1:1 assisted stretching, mobility work, and percussive recovery for athletes and “everyday athletes” (runners, lifters, nurses, shift workers, etc.). We travel to clients’ homes, gyms, workplaces, and sporting events.
 
@@ -194,7 +194,7 @@ Logo (small)
 
 Quick links (Home, Services, Book, Contact)
 
-Text: “© OnFlex [current year]. Recovery for the committed, not the casual.”
+Text: “© OnFlex [current year]. Recovery for the Everyday Athlete.”
 
 Responsive Design:
 

@@ -36,7 +36,7 @@ export default function About() {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Learn about OnFlex's mission to bring professional mobile recovery to everyday athletes in Pittsburgh. Recovery for the committed, not the casual."
+        "Learn about OnFlex's mission to bring professional mobile recovery to everyday athletes in Pittsburgh. Recovery for the Everyday Athlete."
       );
     }
   }, []);
@@ -118,7 +118,7 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-semibold mb-2">Alex Martinez</h3>
+            <h3 className="text-2xl font-semibold mb-2">Ryan Cotchen</h3>
             <p className="text-muted-foreground mb-6">Founder & Lead Recovery Specialist</p>
             <div className="text-lg text-muted-foreground max-w-2xl space-y-4">
               <p>
@@ -128,7 +128,7 @@ export default function About() {
                 OnFlex brings professional recovery services directly to people who are committed to their performance, whether they're chasing PRs or simply trying to feel their best at work and life.
               </p>
               <p className="font-semibold text-foreground">
-                Recovery for the committed, not the casual.
+                Recovery for the Everyday Athlete.
               </p>
             </div>
           </div>

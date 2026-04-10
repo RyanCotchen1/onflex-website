@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { Link } from "wouter";
 import PricingCard from "@/components/PricingCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { pricingTiers, eventPricing } from "@/data/pricing";
 import { Check } from "lucide-react";
+import { CALENDLY_BOOK_URL } from "@/lib/links";
+import { Link } from "wouter";
 
 export default function Pricing() {
   useEffect(() => {
@@ -107,11 +108,21 @@ export default function Pricing() {
           <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
             Book your first session and experience the OnFlex difference.
           </p>
-          <Link href="/book" data-testid="link-book-cta">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6 font-semibold">
+          <Button
+            size="lg"
+            variant="secondary"
+            className="text-lg px-8 py-6 font-semibold"
+            asChild
+            data-testid="link-book-cta"
+          >
+            <a
+              href={CALENDLY_BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book Now
-            </Button>
-          </Link>
+            </a>
+          </Button>
         </div>
       </section>
     </main>

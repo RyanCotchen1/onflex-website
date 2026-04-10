@@ -10,7 +10,7 @@ export default function Services() {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Explore OnFlex's mobile recovery services: 1:1 assisted stretching, mobility work, percussive therapy, and event recovery. Professional service at your location."
+        "Explore OnFlex's mobile recovery services: 1:1 assisted stretching, mobility work, and event recovery. Professional service at your location."
       );
     }
   }, []);
