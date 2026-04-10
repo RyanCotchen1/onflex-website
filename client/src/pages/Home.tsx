@@ -9,12 +9,12 @@ import CTABanner from "@/components/CTABanner";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "OnFlex - Mobile Recovery for Everyday Athletes";
+    document.title = "OnFlex - Recovery For Everyday Athletes";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "OnFlex brings professional 1:1 assisted stretching, mobility work, and recovery directly to you in Pittsburgh, PA. Recovery for the committed, not the casual."
+        "Built for athletes and high-output individuals who want to stay durable, move well, and keep showing up."
       );
     }
   }, []);
